@@ -13,3 +13,5 @@
 ## Functions
 
 ## Try Except
+
+## Exercises
