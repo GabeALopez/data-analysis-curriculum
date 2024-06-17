@@ -5,5 +5,3 @@
 ## Part 2: Getting Started
 
 ## Part 3: Branching
-
-asdf
