@@ -1,4 +1,4 @@
-# Summary of Topics
+# Topics
 
 ## Part 1: What is Git and Github?
 
