@@ -11,6 +11,7 @@ Below are some topics that are practical when working with python and, by extens
 - Functions
 - Try Except
 - Debuggers
+- How to look things up
 
 ## Lists
 
@@ -51,6 +52,55 @@ Lists are a nice way to hold general data but they do not give the functionally 
 ## Numpy Arrays
 
 ## Dictionaries
+
+Dictionaries, what are they and what can they be used for? A dictionary is another type of data structure where it uses a key value pair structure. For example, every employee has an ID number associated with a name. The ID number is the key and the value is the employee name. So then why use dictionaries over a list for instance. Well more broadly speaking when programming you can put any data you want into a list or into a dictionary but sometimes the data you get makes more sense to be put into a key value pair system instead of a list.
+
+So let's take the following two example data sets that are in csv format:
+
+**Example 1:**
+```csv
+Product,Price
+Apple,0.50
+Banana,0.30
+Orange,0.80
+Mango,1.50
+```
+
+**Example 2:**
+```csv
+Item
+Apples
+Bananas
+Oranges
+Milk
+Eggs
+Bread
+```
+
+In example 1, there is a clear associated with the product and it's price. While with example 2 there is no clear association with an items as they are just **listed**. But as data gets more complicated the line between what should be put into a list and what shouldn't can get a bit blurry. So it's starts become up to the programmer to decide what is best based on the situation. But enough on that let's get into how to create a dictionary. In order to create an empty dictionary are you going to write the following code:
+
+```python
+my_dict = {}
+```
+
+This creates an empty dictionary. In order to create one with data you can write similar to the following: 
+
+```python
+my_dict = {1111: 'Joel', 2222: 'Andy', 3333: 'Karen'}
+```
+
+You might start to notice the syntax of the key value pairs. The general syntax is: key: value. This is format of which you user to add to the dictionary as well. So let's try to add another entry into this dictionary:
+
+```python
+my_dict = {1111: 'Joel', 2222: 'Andy', 3333: 'Karen'}
+my_dict[4444] = 'Josh'
+```
+
+You will notice this is not like a list you use an append function to add an entry. What you do instead is use a new ID, or key, and put it brackets with the dictionary you want to add in front of the dictionary name. After that you make it equal to a value. If you ever look at data in a JSON format you will notice the similarity to python dictionaries they have.
+
+### Side Tangent: Dictionaries and Maps
+
+If you ever look into code like c or c++ you will notice that these two coding languages have something similar to python dictionaries. In c and c++ they are called maps and work very much the same way. They have a key which points to a value and may have heard the term "hashmaps" where map may be used in sorting. Of course these are not one to one as c and c++ are languages that work closely with the hardware of a system while python is like not in that it is a scripting language. I encourage you to look into the difference between and system language and a scripting language on your own time with google. It is a very interesting rabbit hole in of itself.
 
 ## Opening and Closing Files
 
@@ -283,13 +333,139 @@ Hopefully this helped to understand loops a bit more and how they compare with a
 
 ## Debuggers: The Godsends of Coding
 
-## Exercises
+## Looking Things Up: The Real Challenge of Programming
 
-### Exercise: Analyzing Weather Data
+Now I deliberately left out some other information throughout the this tutorial as I encourage you to be able to look up information on your own using google when it comes to adding together these differing concepts. Am I being lazy? Yes, I partly am but this is something that can only be done with practice. After all, no pain no gain. But I am not going to leave you out to dry. That being case, it begs the question of how you are supposed to look up some of these things. In the case of adding a list to a dictionary, I myself would go to google put in the search phrase "How to add list to dictionary" and start looking around on stackoverflow. Now since the future is now, we have AI chatbots to help us out on this one as well. Which are quite handy to figure out simple problems like finding out how to add a list to a dictionary. 
+
+Now I am going to put a disclaimer about using chatbots like ChatGPT and Github copilot. They are not the end all be all for coding. Chatbots from my coding experience, all be it somewhat small, cannot help to build full on code bases for you and I encourage not to heavily rely on them. They are a tool not a programmer. The reason for this is these chatbots tends to make mistakes is that if you are unable to spot them then you are going to be left wondering why your code doesn't work despite replying constantly to the chatbot with being on the verge of bashing your computer with a brick. So when starting off I recommend to use these chatbot sparingly and when you get better and better at coding in python you can start to use it more as more of a reference rather than it telling you what/how to code.
+
+Though please be also mindful what code you paste into ChatGPT. Especially if are working for an organization, as you shouldn't leak personal data of users when creating scripts and having ChatGPT analyze code. 
+
+With that out of a way let's look at some examples of how I would look into things if I ran into issues.
+
+### First Scenario: Even Simple Problems Can Take Forever
+
+I am going to start off with a simple scenario here: I was trying to teach someone how to use python once and at the time it had been a little bit since I programmed it. I was trying to teach how to create a dictionary and loop through that dictionary for it's keys and values. But the issue was that I forgot how to do this.
+
+So what was my thought process?:
+
+I know the basic building blocks are that I need the for loop and dictionary. I know how to print items in a dictionary and I know that looping through a list just requires you to name on var in the foreach item in the list. So let's try do that with just as simple example separate from the main file. This way I can just focus on the problem rather than how it interacts with everything else in the main file:
+
+```python
+
+dict = {1:'test', 2:'test2', 3:'test2' }
+
+for value in dict:
+   print(value)
+```
+
+**Results:**
+
+```
+1
+2
+3
+```
+
+Well it is close but not what I am really looking for. I want to print out both the key and the value and not only that the var name "value" does not really match up to the data I am getting. It would be more appropriate to call this var "key" instead as it is getting just the keys.
+
+This being the case, I took to the almighty google for help. I typed in the search "How to iterate through key and value in dictionary python". I got a few results on it. Now it is important when looking for information like this that you don't want to spend all day on one article. You probably want to spend like 15 seconds tops when looking for information as simple as this. Now for more complicated topics this will take longer of course. But you want to try to find an answer quickly so skim articles until you find something that is more familiar. I found an article on realpython.com, but I had to skim about less than quarter down until I got the header that explained the items method which was I was looking for. If you can't find anything in those 15 seconds then it is time to go to another article from those links on google. Remember, the name of the game is to be quick about it. You want to get on with your life. If the article doesn't get to the point, leave it. 
+
+But looking through that header, I found their simple script that showed this:
+
+```
+>>> for key, value in likes.items():
+...     print(key, "->", value)
+...
+color -> blue
+fruit -> apple
+pet -> dog
+```
+
+This looks what I am looking for. It, one, prints out not only the key but also the values and, two, it's simple. 
+
+So let's try to apply this to our own script:
+
+```python
+
+dict = {1:'test', 2:'test2', 3:'test2' }
+
+for key in dict.items():
+   print(value)
+```
+
+**Results:**
+
+```
+(1, 'test')
+(2, 'test2')
+(3, 'test2')
+```
+
+Strange. Why doesn't it look like just straight values? Let me look at the example again:
+
+```
+>>> for key, value in likes.items():
+...     print(key, "->", value)
+...
+color -> blue
+fruit -> apple
+pet -> dog
+```
+
+Oh, I see now. There are two vars in the for loop. Let's try something similar:
+
+```python
+dict = {1:'test', 2:'test2', 3:'test2' }
+
+for key, value in dict.items():
+   print(key, value)
+```
+
+**Results:**
+
+```
+1 test
+2 test2
+3 test2
+```
+
+Look at that, it prints out the straight values now. Mission success! And it only took a minute! Now for those who are doing this for the first time it might take more like 15 minutes. This is a skill you train overtime and you will get better as you keep doing this over and over. It is important to recognize how to break down a problem. If you can break down a problem into smaller parts and then work your way up you can find solutions to many bigger issues.
+
+### Second Scenario: When to Use a Chatbot
+
+I know I put the disclaimer to minimize using a chatbot, but with everything life there are exceptions to the rules. I suggest to use chatbots when you can't figure out just where the code is going wrong. Hopefully you would use a debugger to find this out but sometimes it is quicker to check it with a chatbot. Furthermore, you would want to use a chatbot to quickly just understand what a piece of code is doing as well. For example, take the following function:
+
+```python
+def rearrange_chunks(chunks, key):
+   key_hash = hashlib.sha256(key.encode()).digest()
+   key_index = int.from_bytes(key_hash, byteorder='big')
+
+   # Seed the random number generator with the hash of the key
+   rng = np.random.default_rng(key_index)  # Save the random value
+
+   # Generate a random permutation of indices
+   permuted_indices = rng.permutation(len(chunks))
+   # Take the reverse of the array starting from the end backwards
+
+   # Rearrange chunks based on the permuted indices
+   rearranged_chunks = [None] * len(chunks)
+   for i, index in enumerate(permuted_indices):
+      chunk = apply_distortion(chunks[index])
+      rearranged_chunks[i] = chunk
+   return rearranged_chunks
+```
+This function was in a project I was in that encrypted an image. A friend made this but I didn't really understand what it was doing specifically at the time. I was lazy and didn't want to read the code for 15 minutes so I pasted it into chatGPT to get it break it down for me quickly. After it had spat out it answer, I was able to quickly understand what it was doing. So what took me 15 minutes to understand the code it took just a minute. But please understand that in this scenario I am using ChatGPT as a tool and a supplement to my coding not as something that codes the entire codebase for me.
+
+This really concludes the tutorial part of this document. Now the next thing to do is try put everything into practice. The next section uses weather data that you can mess around with. Follow the parts, and you will essentially know how to program in python. Anything you don't know, you will pick up as you research for a solution to your smaller problems. Remember to take larger problems and break them down into something that is manageable. After that, work your way up with bigger and bigger problems.
+
+Good Luck on the exercise!
+
+## Exercise: Analyzing Weather Data
 
 In this exercise, you will analyze weather data for a week. The data includes daily temperatures and humidity levels. You will perform various tasks such as reading data from a file, calculating average values, finding maximum and minimum values, and handling potential errors using try-except blocks.
 
-#### Part 1: Prepare the Data
+### Part 1: Prepare the Data
 
 1. **Create a Text File**:
    - Name the file `weather_data.csv`.
@@ -306,7 +482,7 @@ In this exercise, you will analyze weather data for a week. The data includes da
      Sunday,24,59
      ```
 
-#### Part 2: Read the Data from the File
+### Part 2: Read the Data from the File
 
 2. **Open and Read the File**:
    - Write a function to read the data from the file.
@@ -314,27 +490,27 @@ In this exercise, you will analyze weather data for a week. The data includes da
    - Each dictionary should have keys: `day`, `temperature`, and `humidity`.
    - Use try-except blocks to handle potential file-related errors.
 
-#### Part 3: Calculate Average Temperature and Humidity
+### Part 3: Calculate Average Temperature and Humidity
 
 3. **Average Calculation**:
    - Write a function to calculate the average temperature.
    - Write another function to calculate the average humidity.
    - Use numpy arrays to facilitate these calculations.
 
-#### Part 4: Find Maximum and Minimum Values
+### Part 4: Find Maximum and Minimum Values
 
 4. **Maximum and Minimum Calculation**:
    - Write a function to find the day with the maximum temperature and its value.
    - Write a function to find the day with the minimum temperature and its value.
    - Write functions to find the days with the maximum and minimum humidity and their values.
 
-#### Part 5: Handle Errors Gracefully
+### Part 5: Handle Errors Gracefully
 
 5. **Error Handling**:
    - Modify the function that reads the weather data to handle errors such as missing or malformed data lines.
    - Use try-except blocks to catch and report these errors without stopping the execution of the program.
 
-#### Summary
+### Summary
 
 - **Lists**: Use to store the weather data.
 - **Dictionaries**: Each entry in the list should be a dictionary representing a day's data.
@@ -344,7 +520,7 @@ In this exercise, you will analyze weather data for a week. The data includes da
 - **File Operations**: Open and read from the weather data file.
 - **Loops**: Iterate over file lines and data entries.
 
-#### Additional Tips
+### Additional Tips
 
 - Make sure to import necessary modules like `numpy`.
 - Test your functions individually to ensure they work correctly.
