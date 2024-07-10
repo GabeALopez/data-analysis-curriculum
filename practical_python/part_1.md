@@ -10,6 +10,7 @@ Below are some topics that are practical when working with python and, by extens
 - Loops
 - Functions
 - Try Except
+- Debuggers
 
 ## Lists
 
@@ -279,6 +280,8 @@ Hopefully this helped to understand loops a bit more and how they compare with a
 ## Functions
 
 ## Try Except
+
+## Debuggers: The Godsends of Coding
 
 ## Exercises
 
