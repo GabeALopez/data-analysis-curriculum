@@ -329,6 +329,8 @@ Hopefully this helped to understand loops a bit more and how they compare with a
 
 ## Functions
 
+Functions are like reusable blocks of code and most programming languages have them. So when would you want to reuse a block of a code. You would want reuse
+
 ## Try Except
 
 ## Debuggers: The Godsends of Coding
