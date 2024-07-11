@@ -1,0 +1,3 @@
+This really concludes the tutorial part of this document. Now the next thing to do is try put everything into practice. The next section uses weather data that you can mess around with. Follow the parts, and you will essentially know how to program in python. Anything you don't know, you will pick up as you research for a solution to your smaller problems. Remember to take larger problems and break them down into something that is manageable. After that, work your way up with bigger and bigger problems.
+
+Good Luck on the exercise!
