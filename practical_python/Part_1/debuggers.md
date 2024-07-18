@@ -17,11 +17,11 @@ print(f"The factorial of {number} is {result}")
 
 Now this is code that is supposed to calculate the factorial of any number that we give to the variable 'number'. So in our case we are supplying the number 5 into the factorial function. The result we should expect is 120. So let's run it and see if we get that value. 
 
-![alt text](https://github.com/GabeALopez/data-analysis-curriculum/blob/main/practical_python/Part_1/debugger_imgs/)
+![alt text](https://github.com/GabeALopez/data-analysis-curriculum/blob/main/practical_python/Part_1/debugger_imgs/error.png)
 
 Hmmm.... It looks we didn't get the result we were supposed to get. So let's add, what's called' a break point. Now a breakpoint tells the debugger where to stop the code so you can start tracing it. To add one in VS code you click on the left side of the line numbers. Let's add one on line 9 of the python code. When hovering your mouse over the left side of the line number 9 you will see a greyed out red dot. If you click it you will see a full red dot. To remove this breakpoint, you will click on the red dot once again. But for now let's keep the breakpoint. Once that is done, we are going to go to the top right where we see an arrow. There should be a drop down array next to it. Click on that and click 'Python Debugger: Debug Python File". This will run the script and stop it at the 9th line. Here is a graphic that shows everything that has been done so far: 
 
-![alt text](https://github.com/GabeALopez/data-analysis-curriculum/blob/main/practical_python/Part_1/debugger_imgs/)
+![alt text](https://github.com/GabeALopez/data-analysis-curriculum/blob/main/practical_python/Part_1/debugger_imgs/breakpoint.png)
 
 What should appear is a big red box that is on the 9th line. This shows that the debugger has stopped on this line and is now awaiting you to issue commands. Now we are not going to use actual commands, but just use the VS code's GUI to do this. At the top of VS code you should see 5 arrows going in differing directions and a square. These are buttons where we are going to use to step through code. But let's go through what each button does. 
 
@@ -42,13 +42,13 @@ The last symbol, the square, will the stop the program and the debugger in it's 
 
 Here is a graphic that shows each one and their names with numbers:
 
-![alt text](https://github.com/GabeALopez/data-analysis-curriculum/blob/main/practical_python/Part_1/debugger_imgs/)
+![alt text](https://github.com/GabeALopez/data-analysis-curriculum/blob/main/practical_python/Part_1/debugger_imgs/buttons.png)
 
 So let's now step through until we get to line 2. A nice thing I've written here about the debugger is that you can see the values of variables while the code is running. We can see this in this example by hovering over the variable 'n'. It will show five as that is the number we passed into the factorial function. Pretty cool!
 
-Now lets step until we get to line 5 and then step again. Now look at the var 'n' it is three now. This is a little strange. If we follow this logic of subtracting 2 from 'n' we seem to be missing numbers to multiply as 5! = 1\*2\*3\*4\*5 but we are missing 4 in this equation. So maybe the problem is with line 5, where it should be decrementing by 1 not 2. So let's stop the debugger, change '2' to '1', and run it like normal. 
+Now lets step until we get to line 5 and then step again. Now look at the var 'n' it is three now. This is a little strange. If we follow this logic of subtracting 2 from 'n' we seem to be missing numbers to multiply as 5! = 1\*2\*3\*4\*5 but we are missing 4 in this equation. So maybe the problem is with line 5, where it should be decrementing by 1 not 2. So let's stop the debugger, change '2' to '1', and run it like normal: 
 
-![alt text](https://github.com/GabeALopez/data-analysis-curriculum/blob/main/practical_python/Part_1/debugger_imgs/)
+![alt text](https://github.com/GabeALopez/data-analysis-curriculum/blob/main/practical_python/Part_1/debugger_imgs/fix.png)
 
 Viola! It calculates correctly now. If you have been following, congrats on your first debug. Out in the real world this is a way to find those bugs and being able to solve them. 
 
