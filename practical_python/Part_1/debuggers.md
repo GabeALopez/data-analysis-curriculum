@@ -28,6 +28,7 @@ What should appear is a big red box that is on the 9th line. This shows that the
 The first button on the far left is the continue button. This tells the debugger to continue running the code until it hits another breakpoint. 
 
 **Side Note:** You can add more than just one breakpoint. You can put them on multiple different lines. So if you really wanted to you could add a breakpoint on every line. But that is really tedious so put your breakpoint at specific locations. But side note over!
+
 **Sider Note:** You can hover over each button with your mouse and it will give you the name of the button as well as the shortcut for it. 
 
 The second arrow is the step over button. This button will tell the debugger to step over a line of code. So for instance if you didn't want to brought into a function in your code execution, you can just jump right over it. 
