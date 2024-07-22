@@ -1,6 +1,6 @@
 # Topics
 
-## Part 1: What is Git and Github?
+## What Is Git and Github and Why Use Them?
 
 ## Part 2: Getting Started
 

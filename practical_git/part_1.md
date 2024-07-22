@@ -1,4 +1,4 @@
-# What is Git and Github and Why Use Them?
+#  What Is Git and Github and Why Use Them?
 
 Git, what is it? Git is a version control software and used widely by many programmers throughout the world. But what is a version control software really? A version control software is a type of software that help keep track of changes between versions of a set of code/project. The reasoning for keeping track of versions is to not only understand what has changed between versions of your code but also in the case of an emergency you can roll back to a perviously known good version. Code is not written perfectly and git helps to identify where a bug may have a occurred so it can fixed by a coder. Especially if new piece of code reopens a new bug in software. In the next few parts, I will explain how to use git and later Github (which will be explained in a little bit here) to save your code locally and to the cloud. 
 
