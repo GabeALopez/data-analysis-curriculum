@@ -6,6 +6,27 @@ But for those who do not really want to use Linux, although I do not advise it, 
 
 ## Command Console - For Linux and WSL
 
+Here I'll explain how to just use Git locally. We are not connecting anything yet to Github just yet. But let's start off with some basics and start with initializing a repository for a test project. First make sure to create a folder to hold your project and the use ```git init```. This will initialize your repository. To commit all your files you have to use ```git add.``` and then ```git commit -m "Initial commit"```. 
+
+Here are the commands in order with comments:
+
+```bash
+# 1. Create project directory
+mkdir myProject
+
+# 2. Change directory into myProject directory
+cd myProject
+
+# 3. Initialize repository
+git init
+
+# 4. Stage files to commit
+git add .
+
+# 5. Commit files with a message that says "Initial commit"
+git commit -m "Initial commit"
+```
+
 ### SSH Keys
 
 ### How to Create a Repository
