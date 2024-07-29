@@ -27,9 +27,30 @@ git add .
 git commit -m "Initial commit"
 ```
 
-### SSH Keys
+### SSH Keys - Linux and WSL
 
-### How to Create a Repository
+Now in order to get your projects to your github you need to create a public key for your Github and a private key for your device. I am going to follow the github page here: ```https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent```
+
+The first step on you have to do is use this command to create a public/private pair:
+
+```bash
+ssh-keygen -t ed25519 -C "your_email@example.com"
+```
+
+The second step is to enter a passkey for the public/private pair
+
+Third, start the ssh-agent in the background with this command:
+
+```bash
+eval "$(ssh-agent -s)"
+```
+
+Fourth, add the private key to the ssh-agent:
+
+```bash
+ssh-add ~/.ssh/id_ed25519
+```
+Fifth, add the public key to github under Profile settings -> SSH keys -> New SSH key, then past the public key from the .ssh directory
 
 ## GUI With Github Desktop - More Practical for Inexperienced Users
 
